@@ -1,0 +1,8 @@
+NumberOfRetweets = function(teg, numb)
+{
+    tweets<-searchTwitter(teg, n=numb)
+    retwCount<-c(twListToDF(tweets))$retweetCount
+    return(retwCount)
+}
+
+NumberOfRetweets("Obama")
