@@ -1,0 +1,14 @@
+FacebookLSC = function(NameGroup, number)
+{
+group_id<-searchGroup(name = NameGroup, token = token)
+i=1
+for (i in 1:length(group_id$id)){
+ if (group_id$privacy[i]=="OPEN")
+ {break}
+}
+group<-getGroup(group_id$id[i], token, n=number)
+grp<-c("Likes: ", group$likes_count, ". Shares: ", group$shares_count, ". Comments: ", group$comments_count)
+return(grp)
+}
+
+FacebookLSC("ElderScrollsOnline", 10)
