@@ -1,0 +1,13 @@
+plot(b, a, col = "red", type = "s", xlab = "Ñëîâî", ylab = "Ê³ëüê³ñòü",
+     main = "Ðåàêö³ÿ êîðèñòóâà÷³â")
+
+#Facebook
+fbOAuth(app_id, app_secret, extended_permissions = TRUE)
+app_id = 1792666397613185
+app_secret = "aGt9sQV7QRN2UKADwtZs4Ke6HkM"
+token<-'EAACEdEose0cBADUP5cygv6z2IcTkxdudbrvp7zmXHTqzm9QzsqXwzzZAU4vey7eZCvMBTJ6T2FZBsR1yZCUsMjSUioUUZADrJcnZBedBhhPOgAZBD9YhCaA3nXgsXGGC5nZBTU2R5YQSxpWvMP3fhU7Bm9ZAUqem3MWkHf8B6tcckGkYBE9QpGHZAB'
+
+#Twitter
+setup_twitter_oauth(api_key, api_secret, access_token = NULL, access_secret = NULL)
+api_key = "ieqrFKRyMSuDhJymStxNE8kra"
+api_secret = "zn8TYxHfSC5i6zwDzrTJerFB4AeT2xrscMlf8ZGTMd5vL9DU3o"
