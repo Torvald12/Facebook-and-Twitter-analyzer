@@ -1,0 +1,15 @@
+NumberOfReviews = function(number, teg, key, sin, to)
+{
+    query<-searchTwitter(teg, n=number, since = sin, until = to)
+    matching<-match(unlist(strsplit(c(twListToDF(query))$text, " ")), key, nomatch = 0)
+    quantity=0
+    
+    for(i in 1:length(matching))
+    {
+        if(matching[i]==1)
+        {quantity=quantity+1}
+    }
+    return (quantity)
+    }
+
+NumberOfReviews(1000, "#Trump", "bad", '2016-10-01', '2016-10-12')
