@@ -1,0 +1,11 @@
+FacebookReaction = function(namePost)
+{
+    words<-c(1, 2, 3, 4, 5)
+    page<-getPage(namePost, token)
+    post<-getReactions(page$id[i], token)
+    vectorReact<-c(post$love_count, post$haha_count, post$wow_count, post$sad_count, post$angry_count)
+    plot(words, vectorReact, col = "red", type = "l", xlab = "Ñëîâî", ylab = "Ê³ëüê³ñòü", main = "Ðåàêö³ÿ êîðèñòóâà÷³â")
+    return (post)
+}
+
+FacebookReaction("Obama")
