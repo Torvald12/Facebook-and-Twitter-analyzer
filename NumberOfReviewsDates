@@ -1,0 +1,35 @@
+NumberOfReviewsDates = function(number, teg, sin, to)
+{
+    reactListNumb<-c(1, 2, 3, 4, 5, 6, 7)
+    reactionList<-c('good', 'bad', 'terrible','beautiful', 'worst', 'best','normal')
+    listElems<-c()
+    for(j in 1:7){
+        query<-searchTwitter(teg, n=number, since = sin, until = to)
+        matching<-match(unlist(strsplit(c(twListToDF(query))$text, " ")), reactionList[j], nomatch = 0)
+        quantity=0
+        
+        for(i in 1:length(matching))
+        {
+            if(matching[i]==1)
+            {quantity=quantity+1}
+        }
+        listElems[j]=quantity
+    }
+    graphic<-plot(reactListNumb, listElems, col = "red", type = "s", xlab = "Ñëîâî", ylab = "Ê³ëüê³ñòü",
+         main = "Ðåàêö³ÿ êîðèñòóâà÷³â")
+    return (listElems)
+    return (graphic)
+}
+
+NumberOfReviewsDates(1000, "Obama", '2016-10-01', '2016-10-13')
+
+    reactListNumb<-c(1, 2, 3, 4, 5, 6, 7)
+    plot(reactListNumb, col = "white", type = "l", xlab = "Word", ylab = "Quantity",
+         main = "Users reactions")
+graphic<-lines(listElems, col = "red")
+
+
+> lines(TrumpBeforeDebats, type = "o", col = "dodgerblue")
+> lines(TrumpAfterDebats, type = "o", col = "dodgerblue4")
+> lines(ClintonBeforeDebats, type = "o", col = "tomato")
+> lines(ClintonAfterDebats, type = "o", col = "violetred1")
